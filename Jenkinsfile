@@ -1,6 +1,6 @@
 pipeline{
 agent any 
-stages{
+stages{ 
 stage('log version info'){
 steps{
 sh 'mvn --version'
