@@ -22,9 +22,8 @@ pipeline {
                     rtServer = Artifactory.newServer url: "${params.ART_URL}", username: "${params.ART_USER}", password: "${params.ART_PASSWORD}"
                     rtMaven = Artifactory.newMavenBuild()
                     buildInfo = Artifactory.newBuildInfo()
-                    // These variables should be PARAMETERIZED
-                    rtMaven.deployer releaseRepo: 'mvn-libs-release', snapshotRepo: 'mvn-libs-snapshot', server: rtServer
-                    rtMaven.resolver releaseRepo: 'mvn-maven-jcenter', snapshotRepo: 'mvn-maven-jcenter', server: rtServer
+                    rtMaven.deployer releaseRepo: 'mvn-libs-release-local', snapshotRepo: 'mvn-libs-snapshot-local', server: rtServer
+                    rtMaven.resolver releaseRepo: 'mvn-libs-release', snapshotRepo: 'mvn-libs-snapshot', server: rtServer
                 }
             }
         }
