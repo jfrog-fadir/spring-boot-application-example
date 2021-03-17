@@ -1,4 +1,3 @@
-
 def rtServer, buildInfo, rtMaven, xrayConfig, xrayResults
 
 pipeline {
