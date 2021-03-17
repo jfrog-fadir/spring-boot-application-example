@@ -1,6 +1,5 @@
 def rtServer, buildInfo, rtMaven, xrayConfig, xrayResults
 
-
 pipeline {
     agent { label 'master' }
     tools {
