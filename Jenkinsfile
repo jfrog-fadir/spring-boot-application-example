@@ -29,13 +29,14 @@ pipeline {
         }
         stage('Checkout'){
             steps {
-                git url: 'https://github.com/jfrogdev/project-examples.git' //JFrog main project examples repository
+
+                git url: 'https://github.com/jfrog-fadir/spring-boot-application-example.git' //JFrog main project examples repository
             }
         }
         stage('Install'){
             steps {
                 script {
-                    rtMaven.run pom: 'maven-example/pom.xml', goals: 'clean install', buildInfo: buildInfo
+                    rtMaven.run pom: 'pom.xml', goals: 'clean install', buildInfo: buildInfo
                 }
             }
         }
