@@ -27,3 +27,4 @@ curl -u user:password "http://localhost:8080/v1/drivers?onlineStatus=ONLINE&dele
 curl -u user:password "http://localhost:8080/v1/drivers?onlineStatus=ONLINE&deleted=false&username=driver01"
 curl -u user:password -X PUT "http://localhost:8080/v1/drivers/4/car/4545PWR"
 ```
+ 
